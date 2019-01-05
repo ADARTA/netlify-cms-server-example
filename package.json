@@ -1,0 +1,32 @@
+{
+  "name": "netlify-cms-server-example",
+  "version": "1.0.0",
+  "description": "Serve up a test backend server api using Express",
+  "main": "index.js",
+  "scripts": {
+    "server": "node ./index.js",
+    "test": "echo \"no tests right now\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarta/netlify-cms-server-example.git"
+  },
+  "keywords": [
+    "express",
+    "netlify-cms",
+    "adarta"
+  ],
+  "author": "talves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adarta/netlify-cms-server-example/issues"
+  },
+  "homepage": "https://github.com/adarta/netlify-cms-server-example#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "netlify-cms-backend-fs": "^0.3.3"
+  },
+  "devDependencies": {
+    "netlify-cms": "^2.3.2"
+  }
+}
