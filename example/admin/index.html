@@ -7,12 +7,17 @@
 </head>
 <body>
 
-
+  <script>
+    /**
+     * global flag to initialize the CMS manually after registering backend and widgets.
+     */
+    CMS_MANUAL_INIT = true; 
+  </script>
   <script src="/cms/dist/netlify-cms.js"></script>
   <script src="/fs/dist/index.js"></script>
   <script>
+    CMS.init = initCMS; // Call CMS.init() after registrations
     CMS.registerBackend('file-system', FileSystemBackendClass)
-    // CMS.init();
 
     var PostPreview = createClass({
       render: function() {
@@ -137,6 +142,7 @@
         );
       }
     });
+    CMS.init();
   </script>
 </body>
 </html>

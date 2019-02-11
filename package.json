@@ -28,6 +28,6 @@
     "netlify-cms-backend-fs": "0.3.5"
   },
   "devDependencies": {
-    "netlify-cms": "^2.3.2"
+    "netlify-cms": "^2.4.0"
   }
 }
