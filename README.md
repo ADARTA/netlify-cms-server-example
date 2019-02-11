@@ -58,7 +58,8 @@ If you want to run your own server script, you could do the following on the CMS
 ```
 
 **_NOTE:_** If you have a CORS issue, because you are running the backend on a different port or location, see
-this [issue and cors solution] by @Benos. Thanks for the heads up @Benos 😀.
+this [issue and cors solution][2]. Thanks for the heads up [@Benoss][3] 😀.
 
 [1]: https://github.com/ADARTA/netlify-cms-components/tree/master/packages/netlify-cms-backend-fs
 [2]: https://github.com/ADARTA/netlify-cms-components/issues/7#issuecomment-462206937
+[3]: https://github.com/Benoss
