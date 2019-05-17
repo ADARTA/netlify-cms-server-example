@@ -11,15 +11,22 @@
     /**
      * global flag to initialize the CMS manually after registering backend and widgets.
      */
-    CMS_MANUAL_INIT = true; 
+    // CMS_MANUAL_INIT = true; 
   </script>
-  <script src="/cms/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/create-react-class@15.6.3/create-react-class.js"></script>
+  <script src="https://unpkg.com/netlify-cms-default-exports@2.2.2/dist/netlify-cms-default-exports.js"></script>
+  <script src="https://unpkg.com/netlify-cms-app@2.9.1/dist/netlify-cms-app.js"></script>
   <script src="/fs/dist/index.js"></script>
   <script>
-    CMS.init = initCMS; // Call CMS.init() after registrations
-    CMS.registerBackend('file-system', FileSystemBackendClass)
+    var CMS = NetlifyCmsApp;
+    // console.log('window', window);
+    // console.log('CMS', CMS);
+    var h = React.createElement;
+    CMS.registerBackend('file-system', FileSystemBackendClass);
 
-    var PostPreview = createClass({
+    var PostPreview = createReactClass({
       render: function() {
         var entry = this.props.entry;
         return h('div', {},
@@ -35,7 +42,7 @@
       }
     });
 
-    var GeneralPreview = createClass({
+    var GeneralPreview = createReactClass({
       render: function() {
         var entry = this.props.entry;
         var title = entry.getIn(['data', 'site_title']);
@@ -58,7 +65,7 @@
       }
     });
 
-    var AuthorsPreview = createClass({
+    var AuthorsPreview = createReactClass({
       render: function() {
         return h('div', {},
           h('h1', {}, 'Authors'),
@@ -73,7 +80,7 @@
       }
     });
 
-    const RelationKitchenSinkPostPreview = createClass({
+    const RelationKitchenSinkPostPreview = createReactClass({
       render: function() {
         // When a post is selected from the relation field, all of it's data
         // will be available in the metadata nested under the collection name,

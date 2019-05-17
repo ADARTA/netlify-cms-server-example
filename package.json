@@ -25,9 +25,7 @@
   "homepage": "https://github.com/adarta/netlify-cms-server-example#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "netlify-cms-backend-fs": "0.3.5"
+    "netlify-cms-backend-fs": "^0.4.4"
   },
-  "devDependencies": {
-    "netlify-cms": "^2.4.0"
-  }
+  "devDependencies": {}
 }

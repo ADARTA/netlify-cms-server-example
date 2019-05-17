@@ -5,7 +5,6 @@ const port = 3000
 const host = 'localhost'
 
 app.use(express.static('example')) // root of our site
-app.use('/cms/dist', express.static('./node_modules/netlify-cms/dist'))
 app.use('/fs/dist', express.static('./node_modules/netlify-cms-backend-fs/dist'))
 
 fsMiddleware(app) // sets up the /api proxy paths
